@@ -1,0 +1,60 @@
+.rightSum[data-v-e2cd2725] {
+  margin-left: 30px;
+}
+.rightSum .selfInfo[data-v-e2cd2725] {
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.rightSum .selfInfo .self[data-v-e2cd2725] {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+}
+.rightSum .selfInfo h3[data-v-e2cd2725] {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 400;
+}
+.rightSum .selfInfo .content[data-v-e2cd2725] {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.rightSum .selfInfo .sumInfo[data-v-e2cd2725] {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.rightSum .selfInfo .sumInfo .sum[data-v-e2cd2725] {
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.rightSum .selfInfo .sumInfo .sum[data-v-e2cd2725]:hover, .rightSum .selfInfo .sumInfo .sum[data-v-e2cd2725]:active {
+  color: #bc6277;
+  transform: scale(1.05);
+}
+.rightSum .selfInfo .aboutMe[data-v-e2cd2725] {
+  margin-top: 10px;
+}
+.rightSum .selfInfo .aboutMe i[data-v-e2cd2725] {
+  cursor: pointer;
+  margin-left: 10px;
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  background-size: cover;
+  transition: all 0.3s;
+}
+.rightSum .selfInfo .aboutMe i[data-v-e2cd2725]:hover, .rightSum .selfInfo .aboutMe i[data-v-e2cd2725]:active {
+  transform: scale(1.05);
+}
+.rightSum .selfInfo .aboutMe .email[data-v-e2cd2725] {
+  background-image: url("/assets/email-25c9c179.svg");
+}
+.rightSum .selfInfo .aboutMe .github[data-v-e2cd2725] {
+  background-image: url("/assets/github-367bd16e.svg");
+}

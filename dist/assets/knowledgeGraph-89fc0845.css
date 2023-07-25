@@ -1,0 +1,8 @@
+#showGraph[data-v-46b8f711] {
+  margin-left: 150px;
+  min-width: 600px;
+  width: calc(100vw - 350px);
+  height: calc(100vh - 100px);
+  min-height: 700px;
+  box-shadow: 5px 5px 10px rgba(128, 128, 128, 0.4);
+}

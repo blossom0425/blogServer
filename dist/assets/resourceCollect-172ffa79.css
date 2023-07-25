@@ -1,0 +1,163 @@
+.resourceComponent[data-v-de8a9c0f] {
+  display: flex;
+  flex-direction: column;
+}
+.resourceComponent h2[data-v-de8a9c0f] {
+  width: 200px;
+  height: 40px;
+  padding-left: 5px;
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-size: 24px;
+  text-align: left;
+  border-bottom: 2px solid rgba(249, 241, 243, 0.7647058824);
+}
+.resourceComponent h2[data-v-de8a9c0f]::before {
+  content: ">";
+  position: relative;
+  left: -5px;
+}
+.tabComponent[data-v-de8a9c0f] {
+  width: 100%;
+  min-width: 900px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.tabComponent .colorLink[data-v-de8a9c0f] {
+  position: relative;
+  margin-right: 20px;
+  margin-bottom: 15px;
+  padding: 20px 10px;
+  width: 260px;
+  border: 1px solid rgba(128, 128, 128, 0.1);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.tabComponent .colorLink[data-v-de8a9c0f]:hover {
+  border-color: rgba(249, 241, 243, 0.7647058824);
+  box-shadow: 3px 3px 5px rgba(249, 241, 243, 0.7647058824);
+}
+.tabComponent .colorLink .title[data-v-de8a9c0f] {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.tabComponent .colorLink .preview[data-v-de8a9c0f] {
+  position: absolute;
+  z-index: 9999;
+  right: 50px;
+  width: 350px;
+  height: 180px;
+}
+.previewShow-enter-active[data-v-de8a9c0f] {
+  animation: show-de8a9c0f 0.5s reverse;
+}
+.previewShow-leave-active[data-v-de8a9c0f] {
+  animation: show-de8a9c0f 0.5s;
+}
+@keyframes show-de8a9c0f {
+0% {
+    opacity: 1;
+}
+100% {
+    opacity: 0;
+}
+}.uiComponent[data-v-3749bb7f] {
+  width: 100%;
+}
+.uiComponent .title[data-v-3749bb7f] {
+  width: 200px;
+  height: 40px;
+  padding-left: 5px;
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-size: 24px;
+  text-align: left;
+  border-bottom: 2px solid rgba(249, 241, 243, 0.7647058824);
+}
+.uiComponent .title[data-v-3749bb7f]::before {
+  content: ">";
+  position: relative;
+  left: -5px;
+}
+.uiComponent .uiCard[data-v-3749bb7f] {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.uiComponent .uiCard .uiTitle[data-v-3749bb7f] {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.uiComponent .uiCard .uiPart[data-v-3749bb7f] {
+  padding: 20px 10px;
+  width: 23%;
+  min-width: 250px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border: 1px solid rgba(128, 128, 128, 0.1);
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.uiComponent .uiCard .uiPart[data-v-3749bb7f]:hover {
+  border-color: rgba(249, 241, 243, 0.7647058824);
+  box-shadow: 3px 3px 5px rgba(249, 241, 243, 0.7647058824);
+}
+.uiComponent .uiCard .uiPart .github_link[data-v-3749bb7f] {
+  display: flex;
+  margin-top: 10px;
+}
+.uiComponent .uiCard .uiPart .github_link i.github[data-v-3749bb7f] {
+  cursor: pointer;
+  margin-left: 10px;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background-size: cover;
+  transition: all 0.3s;
+  background-image: url("/assets/github-367bd16e.svg");
+}
+.uiComponent .uiCard .uiPart .github_link i.github[data-v-3749bb7f]:hover, .uiComponent .uiCard .uiPart .github_link i.github[data-v-3749bb7f]:active {
+  transform: scale(1.05);
+}
+.uiComponent .uiCard .uiPart .github_link .link[data-v-3749bb7f] {
+  margin-left: 5px;
+  font-size: 12px;
+  line-height: 20px;
+}.resourceCollect[data-v-f0ae244b] {
+  display: flex;
+  width: 100%;
+}
+.resourceCollect .tabTitles[data-v-f0ae244b] {
+  margin-right: 30px;
+  width: 150px;
+  min-width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-right: 1px solid rgba(128, 128, 128, 0.1);
+  border-radius: 10px;
+}
+.resourceCollect .tabTitles .tabTitle[data-v-f0ae244b] {
+  margin-bottom: 5px;
+  height: 45px;
+  line-height: 45px;
+  font-size: 16px;
+  color: rgba(57, 24, 32, 0.768627451);
+  background-color: rgba(249, 241, 243, 0.7647058824);
+  border: 1px solid rgba(128, 128, 128, 0.1);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.resourceCollect .tabTitles .tabTitle[data-v-f0ae244b]:hover, .resourceCollect .tabTitles .tabTitle[data-v-f0ae244b]:active {
+  color: #000;
+  background-color: #fff;
+}
+.resourceCollect .tabTitles .active[data-v-f0ae244b] {
+  color: #000;
+  background-color: #fff;
+}
