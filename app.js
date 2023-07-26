@@ -22,20 +22,21 @@ const update = multer({
 app.use(update.any());
 const ADMIN_TOKEN_PATH = "/_token"; //category/_token/add 凡是带有_token的都要验证
 app.all("*", async (req, res, next) => {
-    if (req.path.indexOf(ADMIN_TOKEN_PATH) !== -1) {
-        let token = req.headers.token;
-        let search_token_sql = "select * from `admin` where `token` = ?";
-        let adminResult = await db.async.all(search_token_sql, [token]);
-        if (adminResult.err || !adminResult.rows || !token ) {
-            res.send({
-                code: 403, //拒绝操作
-                message: "未登录"
-            })
-            return;
-        }
-        else next();
-    }
-    else next();
+    // if (req.path.indexOf(ADMIN_TOKEN_PATH) !== -1) {
+    //     let token = req.headers.token;
+    //     let search_token_sql = "select * from `admin` where `token` = ?";
+    //     let adminResult = await db.async.all(search_token_sql, [token]);
+    //     if (adminResult.err || !adminResult.rows || !token ) {
+    //         res.send({
+    //             code: 403, //拒绝操作
+    //             message: "未登录"
+    //         })
+    //         return;
+    //     }
+    //     else next();
+    // }
+    // else next();
+    next();
 })
 //注册路由
 app.use("/test", require("./routers/testRouter"));
