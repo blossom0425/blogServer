@@ -4,6 +4,7 @@ const {db,genid} = require("../db/DbUtils");
 const {v4:uuidv4} = require("uuid"); // note uuid
 router.post("/login",async (req,res)=>{
     let {account,password} = req.body;
+    console.log(account,"尝试登录");
     let {err,rows} = await db.async.all("select * from `admin` where `account` = ?",[account]);
     if(rows.length>0&&!err){
         if(rows[0].password!==password){

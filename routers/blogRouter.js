@@ -37,7 +37,7 @@ router.put("/_token/update", async (req, res) => {
     let firstSpace = content.indexOf(" ", index + 4);
     let imgSrc = content.slice(index + 5, firstSpace - 1);
     const update_sql = "update `blog` set `title` = ? , `category_id` = ? , `content` = ?,`describe`=?,`tag_ids`=?,`img_src`=?  where `id` = ?"
-    let params = [title, type, content, describe, tags, imgSrc, id];
+    let params = [title, type, content, describe, tags, imgSrc,id];
     // 遍历文章内容获得第一个img标签 没有就存null
     let { err, rows } = await db.async.run(update_sql, params);
     if (!err) {
@@ -155,14 +155,14 @@ router.get("/_token/timeline", async (req, res) => {
 router.get("/_token/detail", async (req, res) => {
     let { id } = req.query;
     let search_sql = "select * from `blog` where `id` = ?";
-    let { err, rows } = await db.async.all(search_sql, [id]);
     const search_tags_sql = "select * from `tag`";
+    let { err, rows } = await db.async.all(search_sql, [id]);
     let tagResult = await db.async.all(search_tags_sql, []);
     const tagOptions = tagResult.rows;
     for (let blog of rows) {
         let tempTag = blog.tag_ids; //[]
         let timeStamp = new Date(blog.create_time);
-        blog.create_time = `${timeStamp.getFullYear()}-${timeStamp.getMonth()}- ${timeStamp.getDate()}`
+        blog.create_time = `${timeStamp.getFullYear()}-${timeStamp.getMonth()+1}-${timeStamp.getDate()}`
         blog.tag_ids = [];
         for (let tag of tagOptions) {
             if (tempTag.indexOf(tag.id) > -1)

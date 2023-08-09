@@ -18,9 +18,9 @@ router.post("/rich_editor_upload",async(req,res)=>{
         // 随机文件名字
         let file_name = genid.NextId() + "." + file_ext;
         // 修改文件名字+移动文件
-        fs.renameSync(process.cwd()+"\\public\\upload\\temp\\" + file.filename,
-        process.cwd() + "\\public\\upload\\" + file_name);
-        ret_files.push("\\upload\\"+file_name);
+        fs.renameSync(process.cwd()+"/public/upload/temp/" + file.filename,
+        process.cwd() + "/public/upload/" + file_name);
+        ret_files.push("/upload/"+file_name);
     }
     res.send({
         "errno":0,
