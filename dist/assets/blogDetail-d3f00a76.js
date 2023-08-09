@@ -1,15 +1,18 @@
-import { _ as _export_sfc, r as ref, a as openBlock, c as createElementBlock, d as createBaseVNode, t as toDisplayString, F as Fragment, b as renderList, x as normalizeClass, C as commonjsGlobal, D as getDefaultExportFromCjs, E as useRoute, i as inject, o as onMounted, h as createVNode, g as unref, s as isRef, y as request } from "./index-17611780.js";
-const leftNav_vue_vue_type_style_index_0_scoped_ad3a1f77_lang = "";
+import { _ as _export_sfc, r as ref, a as openBlock, c as createElementBlock, d as createBaseVNode, t as toDisplayString, x as normalizeClass, h as createVNode, w as withCtx, k as withDirectives, v as vShow, F as Fragment, b as renderList, T as Transition, C as commonjsGlobal, D as getDefaultExportFromCjs, E as useRoute, i as inject, o as onMounted, g as unref, s as isRef, y as request } from "./index-ab002796.js";
+const leftNav_vue_vue_type_style_index_0_scoped_141fe8e8_lang = "";
 const _hoisted_1$1 = {
   class: "leftNav"
 };
 const _hoisted_2$1 = {
+  class: "main"
+};
+const _hoisted_3$1 = {
   class: "title"
 };
-const _hoisted_3 = {
+const _hoisted_4$1 = {
   class: "navs"
 };
-const _hoisted_4 = ["title", "onClick"];
+const _hoisted_5$1 = ["title", "onClick"];
 const _sfc_main$1 = {
   __name: "leftNav",
   props: {
@@ -24,9 +27,13 @@ const _sfc_main$1 = {
     activeTitle: {
       type: Object,
       default: {}
+    },
+    isShow: {
+      type: Boolean,
+      default: true
     }
   },
-  emits: ["update:activeTitle"],
+  emits: ["update:activeTitle", "update:isShow"],
   setup(__props, {
     emit
   }) {
@@ -41,19 +48,30 @@ const _sfc_main$1 = {
         block: "center"
       });
     };
+    const handleControl = function() {
+      emit("update:isShow", !props.isShow);
+    };
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1$1, [createBaseVNode("span", _hoisted_2$1, toDisplayString(__props.title), 1), createBaseVNode("div", _hoisted_3, [(openBlock(true), createElementBlock(Fragment, null, renderList(__props.nav_data, (item, index) => {
-        return openBlock(), createElementBlock("span", {
-          class: normalizeClass(["nav_word", [__props.activeTitle.title === item.title ? "active_nav" : "", item.tagName]]),
-          key: index,
-          title: item.title.length >= 10 ? item.title : "",
-          onClick: ($event) => turnToNote(item)
-        }, toDisplayString(item.title), 11, _hoisted_4);
-      }), 128))])]);
+      return openBlock(), createElementBlock("div", _hoisted_1$1, [createBaseVNode("div", {
+        class: normalizeClass(["controlBtn", __props.isShow ? "relpos" : "selfpos"]),
+        onClick: handleControl
+      }, toDisplayString(__props.isShow ? "<" : ">"), 3), createVNode(Transition, {
+        name: "fade_left"
+      }, {
+        default: withCtx(() => [withDirectives(createBaseVNode("div", _hoisted_2$1, [createBaseVNode("span", _hoisted_3$1, toDisplayString(__props.title), 1), createBaseVNode("div", _hoisted_4$1, [(openBlock(true), createElementBlock(Fragment, null, renderList(__props.nav_data, (item, index) => {
+          return openBlock(), createElementBlock("span", {
+            class: normalizeClass(["nav_word", [__props.activeTitle.title === item.title ? "active_nav" : "", item.tagName]]),
+            key: index,
+            title: item.title.length >= 10 ? item.title : "",
+            onClick: ($event) => turnToNote(item)
+          }, toDisplayString(item.title), 11, _hoisted_5$1);
+        }), 128))])], 512), [[vShow, __props.isShow]])]),
+        _: 1
+      })]);
     };
   }
 };
-const leftNav = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["__scopeId", "data-v-ad3a1f77"]]);
+const leftNav = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["__scopeId", "data-v-141fe8e8"]]);
 var prismCore = { exports: {} };
 (function(module) {
   var _self = typeof window !== "undefined" ? window : typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope ? self : {};
@@ -20366,12 +20384,24 @@ const prismInlineColor = "";
 })();
 const prismOkaidia = "";
 const prism = "";
-const blogDetail_vue_vue_type_style_index_0_scoped_8cecd077_lang = "";
+const blogDetail_vue_vue_type_style_index_0_scoped_dc3dd7cc_lang = "";
 const blogDetail_vue_vue_type_style_index_1_lang = "";
 const _hoisted_1 = {
   class: "blogDetail"
 };
-const _hoisted_2 = ["innerHTML"];
+const _hoisted_2 = {
+  class: "titleContainer"
+};
+const _hoisted_3 = {
+  class: "bottom"
+};
+const _hoisted_4 = {
+  class: "time"
+};
+const _hoisted_5 = {
+  class: "tags"
+};
+const _hoisted_6 = ["innerHTML"];
 const _sfc_main = {
   __name: "blogDetail",
   setup(__props) {
@@ -20389,7 +20419,7 @@ const _sfc_main = {
         }).then((res) => {
           if (res.code === 200) {
             blogContent.value = res.data;
-            blogContent.value.content = `<h1>${blogContent.value.title}</h1>` + blogContent.value.content;
+            blogContent.value.content = blogContent.value.content;
             resolve();
           } else {
             message.error("加载博客失败");
@@ -20406,7 +20436,7 @@ const _sfc_main = {
       const headers = [];
       let count = 0;
       blogNodes.forEach((event, index) => {
-        if (count === 0) {
+        if (count === 0 && event.innerHTML == blogContent.value.title) {
           count++;
         } else {
           if (event.tagName === "H1" || event.tagName === "H2" || event.tagName === "H3") {
@@ -20421,10 +20451,17 @@ const _sfc_main = {
       nav_data.value = headers;
       active_nav.value = headers[0];
     };
+    let isShow = ref(true);
     onMounted(() => {
       initData().then(() => {
         initcatalogue();
         Prism$1.highlightAll();
+      });
+      window.addEventListener("resize", () => {
+        if (document.body.clientWidth < 1e3)
+          isShow.value = false;
+        else
+          isShow.value = true;
       });
     });
     return (_ctx, _cache) => {
@@ -20432,15 +20469,24 @@ const _sfc_main = {
         title: unref(blogContent).title,
         nav_data: unref(nav_data),
         activeTitle: unref(active_nav),
-        "onUpdate:activeTitle": _cache[0] || (_cache[0] = ($event) => isRef(active_nav) ? active_nav.value = $event : active_nav = $event)
-      }, null, 8, ["title", "nav_data", "activeTitle"]), createBaseVNode("div", {
+        "onUpdate:activeTitle": _cache[0] || (_cache[0] = ($event) => isRef(active_nav) ? active_nav.value = $event : active_nav = $event),
+        isShow: unref(isShow),
+        "onUpdate:isShow": _cache[1] || (_cache[1] = ($event) => isRef(isShow) ? isShow.value = $event : isShow = $event)
+      }, null, 8, ["title", "nav_data", "activeTitle", "isShow"]), createBaseVNode("div", {
+        class: normalizeClass(["container", unref(isShow) ? "margin_nav" : ""])
+      }, [createBaseVNode("div", _hoisted_2, [createBaseVNode("h1", null, toDisplayString(unref(blogContent).title), 1), createBaseVNode("div", _hoisted_3, [createBaseVNode("span", _hoisted_4, toDisplayString(unref(blogContent).create_time), 1), createBaseVNode("div", _hoisted_5, [(openBlock(true), createElementBlock(Fragment, null, renderList(unref(blogContent).tag_ids, (tag) => {
+        return openBlock(), createElementBlock("span", {
+          class: "tag",
+          key: tag.id
+        }, toDisplayString(tag.name), 1);
+      }), 128))])])]), createBaseVNode("div", {
         class: "mainBlog",
         innerHTML: unref(blogContent).content
-      }, null, 8, _hoisted_2)]);
+      }, null, 8, _hoisted_6)], 2)]);
     };
   }
 };
-const blogDetail = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-8cecd077"]]);
+const blogDetail = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-dc3dd7cc"]]);
 export {
   blogDetail as default
 };

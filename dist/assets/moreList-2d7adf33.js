@@ -1,7 +1,7 @@
-import { n as noteCard } from "./noteCard-c44542a1.js";
-import { _ as _export_sfc, E as useRoute, u as useRouter, i as inject, r as ref, f as useMsgStore, o as onMounted, a as openBlock, c as createElementBlock, d as createBaseVNode, t as toDisplayString, g as unref, F as Fragment, b as renderList, e as createBlock, m as createTextVNode, j as createCommentVNode, p as pushScopeId, l as popScopeId } from "./index-17611780.js";
-const moreList_vue_vue_type_style_index_0_scoped_b5e39b57_lang = "";
-const _withScopeId = (n) => (pushScopeId("data-v-b5e39b57"), n = n(), popScopeId(), n);
+import { _ as _export_sfc, E as useRoute, u as useRouter, i as inject, r as ref, f as useMsgStore, o as onMounted, a as openBlock, c as createElementBlock, d as createBaseVNode, t as toDisplayString, g as unref, F as Fragment, b as renderList, h as createVNode, w as withCtx, T as Transition, e as createBlock, k as withDirectives, v as vShow, m as createTextVNode, j as createCommentVNode, p as pushScopeId, l as popScopeId } from "./index-ab002796.js";
+import { n as noteCard } from "./noteCard-bdafac91.js";
+const moreList_vue_vue_type_style_index_0_scoped_c4957dbc_lang = "";
+const _withScopeId = (n) => (pushScopeId("data-v-c4957dbc"), n = n(), popScopeId(), n);
 const _hoisted_1 = {
   class: "moreList"
 };
@@ -35,7 +35,7 @@ const _hoisted_9 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBase
     "border-bottom": "1px solid",
     "font-weight": "400"
   }
-}, "分类", -1));
+}, "分类 ", -1));
 const _hoisted_10 = ["onClick"];
 const _hoisted_11 = {
   class: "num"
@@ -50,7 +50,7 @@ const _hoisted_13 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBas
     "border-bottom": "1px solid",
     "font-weight": "400"
   }
-}, [/* @__PURE__ */ createTextVNode("根据"), /* @__PURE__ */ createBaseVNode("strong", null, "标签"), /* @__PURE__ */ createTextVNode("分类 ")], -1));
+}, [/* @__PURE__ */ createTextVNode(" 根据"), /* @__PURE__ */ createBaseVNode("strong", null, "标签"), /* @__PURE__ */ createTextVNode("分类 ")], -1));
 const _hoisted_14 = ["onClick"];
 const _hoisted_15 = {
   class: "num"
@@ -80,8 +80,15 @@ const _sfc_main = {
         console.log(err);
       });
     };
+    const isShow = ref(true);
     onMounted(() => {
       initData();
+      window.addEventListener("resize", () => {
+        if (document.body.clientWidth < 1e3)
+          isShow.value = false;
+        else
+          isShow.value = true;
+      });
     });
     const turnToDetail = function(id2) {
       window.open("#/detail?id=" + id2);
@@ -114,27 +121,32 @@ const _sfc_main = {
           blog,
           onClick: ($event) => turnToDetail(blog.id)
         }, null, 8, ["blog", "onClick"]);
-      }), 128))]), createBaseVNode("div", _hoisted_7, [createBaseVNode("div", _hoisted_8, [_hoisted_9, (openBlock(true), createElementBlock(Fragment, null, renderList(unref(msg).categories, (category) => {
-        return openBlock(), createElementBlock(Fragment, {
-          key: category.id
-        }, [category.name !== unref(name) ? (openBlock(), createElementBlock("div", {
-          key: 0,
-          class: "nav",
-          onClick: ($event) => turnToMoreCategory(category)
-        }, [createTextVNode(toDisplayString(category.name), 1), createBaseVNode("span", _hoisted_11, toDisplayString(category.sum), 1)], 8, _hoisted_10)) : createCommentVNode("", true)], 64);
-      }), 128))]), createBaseVNode("div", _hoisted_12, [_hoisted_13, (openBlock(true), createElementBlock(Fragment, null, renderList(unref(msg).tags, (tag) => {
-        return openBlock(), createElementBlock(Fragment, {
-          key: tag.id
-        }, [tag.name !== unref(name) ? (openBlock(), createElementBlock("div", {
-          key: 0,
-          class: "nav",
-          onClick: ($event) => turnToMoreTag(tag)
-        }, [createTextVNode(toDisplayString(tag.name), 1), createBaseVNode("span", _hoisted_15, toDisplayString(tag.sum), 1)], 8, _hoisted_14)) : createCommentVNode("", true)], 64);
-      }), 128))])])])]);
+      }), 128))]), createVNode(Transition, {
+        name: "fade_right"
+      }, {
+        default: withCtx(() => [withDirectives(createBaseVNode("div", _hoisted_7, [createBaseVNode("div", _hoisted_8, [_hoisted_9, (openBlock(true), createElementBlock(Fragment, null, renderList(unref(msg).categories, (category) => {
+          return openBlock(), createElementBlock(Fragment, {
+            key: category.id
+          }, [category.name !== unref(name) ? (openBlock(), createElementBlock("div", {
+            key: 0,
+            class: "nav",
+            onClick: ($event) => turnToMoreCategory(category)
+          }, [createTextVNode(toDisplayString(category.name), 1), createBaseVNode("span", _hoisted_11, toDisplayString(category.sum), 1)], 8, _hoisted_10)) : createCommentVNode("", true)], 64);
+        }), 128))]), createBaseVNode("div", _hoisted_12, [_hoisted_13, (openBlock(true), createElementBlock(Fragment, null, renderList(unref(msg).tags, (tag) => {
+          return openBlock(), createElementBlock(Fragment, {
+            key: tag.id
+          }, [tag.name !== unref(name) ? (openBlock(), createElementBlock("div", {
+            key: 0,
+            class: "nav",
+            onClick: ($event) => turnToMoreTag(tag)
+          }, [createTextVNode(toDisplayString(tag.name), 1), createBaseVNode("span", _hoisted_15, toDisplayString(tag.sum), 1)], 8, _hoisted_14)) : createCommentVNode("", true)], 64);
+        }), 128))])], 512), [[vShow, isShow.value]])]),
+        _: 1
+      })])]);
     };
   }
 };
-const moreList = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-b5e39b57"]]);
+const moreList = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-c4957dbc"]]);
 export {
   moreList as default
 };

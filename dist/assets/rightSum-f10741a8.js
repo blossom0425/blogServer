@@ -1,8 +1,9 @@
-import { _ as _export_sfc, u as useRouter, f as useMsgStore, o as onMounted, a as openBlock, c as createElementBlock, d as createBaseVNode, g as unref, t as toDisplayString, p as pushScopeId, l as popScopeId } from "./index-17611780.js";
+import { _ as _export_sfc, u as useRouter, f as useMsgStore, r as ref, o as onMounted, g as unref, a as openBlock, c as createElementBlock, d as createBaseVNode, t as toDisplayString, j as createCommentVNode, p as pushScopeId, l as popScopeId } from "./index-ab002796.js";
 const _imports_0 = "/assets/self-2d228c34.jpeg";
-const rightSum_vue_vue_type_style_index_0_scoped_e2cd2725_lang = "";
-const _withScopeId = (n) => (pushScopeId("data-v-e2cd2725"), n = n(), popScopeId(), n);
+const rightSum_vue_vue_type_style_index_0_scoped_2f436906_lang = "";
+const _withScopeId = (n) => (pushScopeId("data-v-2f436906"), n = n(), popScopeId(), n);
 const _hoisted_1 = {
+  key: 0,
   class: "rightSum"
 };
 const _hoisted_2 = {
@@ -67,18 +68,25 @@ const _sfc_main = {
   setup(__props) {
     const router = useRouter();
     const msg = useMsgStore();
+    let isShow = ref(true);
     onMounted(() => {
       msg.init();
+      window.addEventListener("resize", () => {
+        if (document.body.clientWidth < 1e3)
+          isShow.value = false;
+        else
+          isShow.value = true;
+      });
     });
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1, [createBaseVNode("div", _hoisted_2, [_hoisted_3, _hoisted_4, _hoisted_5, createBaseVNode("div", _hoisted_6, [createBaseVNode("div", {
+      return unref(isShow) ? (openBlock(), createElementBlock("div", _hoisted_1, [createBaseVNode("div", _hoisted_2, [_hoisted_3, _hoisted_4, _hoisted_5, createBaseVNode("div", _hoisted_6, [createBaseVNode("div", {
         class: "sum",
         onClick: _cache[0] || (_cache[0] = ($event) => unref(router).push("/timeline"))
-      }, [_hoisted_7, createBaseVNode("span", _hoisted_8, toDisplayString(unref(msg).article_sum), 1)]), createBaseVNode("div", _hoisted_9, [_hoisted_10, createBaseVNode("span", _hoisted_11, toDisplayString(unref(msg).category_sum), 1)]), createBaseVNode("div", _hoisted_12, [_hoisted_13, createBaseVNode("span", _hoisted_14, toDisplayString(unref(msg).tag_sum), 1)]), createBaseVNode("div", _hoisted_15, [_hoisted_16, createBaseVNode("span", _hoisted_17, toDisplayString(unref(msg).knowledge_sum), 1)])]), _hoisted_18])]);
+      }, [_hoisted_7, createBaseVNode("span", _hoisted_8, toDisplayString(unref(msg).article_sum), 1)]), createBaseVNode("div", _hoisted_9, [_hoisted_10, createBaseVNode("span", _hoisted_11, toDisplayString(unref(msg).category_sum), 1)]), createBaseVNode("div", _hoisted_12, [_hoisted_13, createBaseVNode("span", _hoisted_14, toDisplayString(unref(msg).tag_sum), 1)]), createBaseVNode("div", _hoisted_15, [_hoisted_16, createBaseVNode("span", _hoisted_17, toDisplayString(unref(msg).knowledge_sum), 1)])]), _hoisted_18])])) : createCommentVNode("", true);
     };
   }
 };
-const rightSum = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-e2cd2725"]]);
+const rightSum = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-2f436906"]]);
 export {
   rightSum as r
 };

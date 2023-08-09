@@ -1,5 +1,5 @@
-import { l as leftNav } from "./leftNav-3309d8a6.js";
-import { _ as _export_sfc, r as ref, i as inject, o as onMounted, a as openBlock, c as createElementBlock, h as createVNode, g as unref, s as isRef, y as request, z as nextTick, p as pushScopeId, l as popScopeId, d as createBaseVNode } from "./index-17611780.js";
+import { l as leftNav } from "./leftNav-9c6a6af6.js";
+import { _ as _export_sfc, r as ref, i as inject, o as onMounted, a as openBlock, c as createElementBlock, h as createVNode, g as unref, s as isRef, y as request, z as nextTick, p as pushScopeId, l as popScopeId, d as createBaseVNode } from "./index-ab002796.js";
 class IframeEventChannelController {
   constructor(iFrameController, domain = "*") {
     this.channel = new MessageChannel();
@@ -169,8 +169,8 @@ class XMindEmbedViewer {
     return this.internalState.currentSheetId;
   }
 }
-const knowledgeGraph_vue_vue_type_style_index_0_scoped_46b8f711_lang = "";
-const _withScopeId = (n) => (pushScopeId("data-v-46b8f711"), n = n(), popScopeId(), n);
+const knowledgeGraph_vue_vue_type_style_index_0_scoped_f5467f4f_lang = "";
+const _withScopeId = (n) => (pushScopeId("data-v-f5467f4f"), n = n(), popScopeId(), n);
 const _hoisted_1 = {
   class: "knowledgeGraph"
 };
@@ -233,7 +233,7 @@ const _sfc_main = {
     };
   }
 };
-const knowledgeGraph = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-46b8f711"]]);
+const knowledgeGraph = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-f5467f4f"]]);
 export {
   knowledgeGraph as default
 };

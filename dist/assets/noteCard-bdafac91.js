@@ -1,5 +1,5 @@
-import { _ as _export_sfc, u as useRouter, E as useRoute, a as openBlock, c as createElementBlock, d as createBaseVNode, t as toDisplayString, F as Fragment, b as renderList, G as withModifiers } from "./index-17611780.js";
-const noteCard_vue_vue_type_style_index_0_scoped_a427c588_lang = "";
+import { _ as _export_sfc, u as useRouter, E as useRoute, a as openBlock, c as createElementBlock, d as createBaseVNode, t as toDisplayString, F as Fragment, b as renderList, G as withModifiers } from "./index-ab002796.js";
+const noteCard_vue_vue_type_style_index_0_scoped_8ce8c6c3_lang = "";
 const _hoisted_1 = {
   class: "mycard noteCard"
 };
@@ -54,7 +54,7 @@ const _sfc_main = {
     };
   }
 };
-const noteCard = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-a427c588"]]);
+const noteCard = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-8ce8c6c3"]]);
 export {
   noteCard as n
 };

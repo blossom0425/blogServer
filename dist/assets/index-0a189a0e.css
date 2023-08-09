@@ -114,6 +114,64 @@ button:focus-visible {
   border: 1px solid rgba(128, 128, 128, 0.15);
   box-shadow: 5px 5px 8px rgba(128, 128, 128, 0.05);
   border-radius: 10px;
+}
+
+.tags {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.tags .tag {
+  cursor: pointer;
+  margin-left: 5px;
+  border: 1px solid;
+  padding: 2px 5px;
+  font-size: 12px;
+  border-radius: 5px;
+  background-color: #bc6277;
+  color: #fff;
+  transition: all .2s;
+
+  
+}
+.tags .tag:hover,
+.tags .tag:active {
+    background-color: #bc6277cc;
+}
+
+
+/* 左侧导航栏动画设置 */
+
+.fade_left-enter-active,
+.fade_left-leave-active {
+  transition: all .5s;
+}
+
+.fade_left-enter-from,
+.fade_left-leave-to {
+  transform: translateX(-100%);
+}
+
+.fade_left-enter-to,
+.fade_left-leave-from {
+  transform: translateX(0);
+}
+/* 右侧 */
+.fade_right-enter-active,
+.fade_right-leave-active {
+  transition: all .5s;
+}
+
+.fade_right-enter-from,
+.fade_right-leave-to {
+  transform: translateX(100%);
+}
+
+.fade_right-enter-to,
+.fade_right-leave-from {
+  transform: translateX(0);
 }header[data-v-c88310e7] {
   z-index: 999;
   position: fixed;
@@ -152,16 +210,16 @@ header .nav .active_nav[data-v-c88310e7] {
   color: #bc6277;
   font-weight: 600;
 }
-.mainPage[data-v-ea596449] {
+.mainPage[data-v-fb52e740] {
   margin: 60px auto;
   padding-top: 5px;
   width: 85vw;
   /* 再设置min-width */
 }
-.pageChange-enter-active[data-v-ea596449] {
-  animation: pageHide-ea596449 0.3s ease-out reverse;
+.pageChange-enter-active[data-v-fb52e740] {
+  animation: pageHide-fb52e740 0.3s ease-out reverse;
 }
-@keyframes pageHide-ea596449 {
+@keyframes pageHide-fb52e740 {
 0% {
     opacity: 1;
 }

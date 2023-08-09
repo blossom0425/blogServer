@@ -10742,9 +10742,9 @@ axios.HttpStatusCode = HttpStatusCode$1;
 axios.default = axios;
 const axios$1 = axios;
 const request = axios$1.create({
-  // baseURL:"/taskMan"
-  // baseURL:"http://127.0.0.1:4523/m1/2667681-0-default"
-  baseURL: "http://localhost:8080"
+  // baseURL:"http://localhost:8080"
+  // baseURL: "http://47.93.47.26:1234/"
+  baseURL: "/proxy"
 });
 request.interceptors.request.use(function(config) {
   config.headers["token"] = localStorage.getItem("token");
@@ -76664,7 +76664,7 @@ const useMsgStore = defineStore("msg", {
     }
   }
 });
-const App_vue_vue_type_style_index_0_scoped_ea596449_lang = "";
+const App_vue_vue_type_style_index_0_scoped_fb52e740_lang = "";
 const App_vue_vue_type_style_index_1_lang = "";
 const _hoisted_1$1 = {
   style: ""
@@ -76703,7 +76703,7 @@ const _sfc_main$1 = {
     };
   }
 };
-const App = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["__scopeId", "data-v-ea596449"]]);
+const App = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["__scopeId", "data-v-fb52e740"]]);
 const scriptRel = "modulepreload";
 const assetsURL = function(dep) {
   return "/" + dep;
@@ -76757,31 +76757,31 @@ const __vitePreload = function preload(baseModule, deps, importerUrl) {
 };
 let routes = [{
   path: "",
-  component: () => __vitePreload(() => import("./homePage-71d941b1.js"), true ? ["assets/homePage-71d941b1.js","assets/rightSum-a81b82d0.js","assets/rightSum-efa9f3ea.css","assets/noteCard-c44542a1.js","assets/noteCard-04bcbd4b.css","assets/homePage-63dd4a04.css"] : void 0)
+  component: () => __vitePreload(() => import("./homePage-e55e2112.js"), true ? ["assets/homePage-e55e2112.js","assets/rightSum-f10741a8.js","assets/rightSum-2fa03363.css","assets/noteCard-bdafac91.js","assets/noteCard-0ef1e969.css","assets/homePage-4f5ed564.css"] : void 0)
 }, {
   path: "/note",
-  component: () => __vitePreload(() => import("./homeNote-acaf301c.js"), true ? ["assets/homeNote-acaf301c.js","assets/leftNav-3309d8a6.js","assets/leftNav-679b71ea.css","assets/rightNav-43a5a644.js","assets/rightNav-d5ba02ed.css","assets/homeNote-c7b9d852.css"] : void 0)
+  component: () => __vitePreload(() => import("./homeNote-35c68acf.js"), true ? ["assets/homeNote-35c68acf.js","assets/leftNav-9c6a6af6.js","assets/leftNav-679b71ea.css","assets/rightNav-a45ab814.js","assets/rightNav-d5ba02ed.css","assets/homeNote-c7b9d852.css"] : void 0)
 }, {
   path: "/project",
-  component: () => __vitePreload(() => import("./projectNote-4f81437c.js"), true ? ["assets/projectNote-4f81437c.js","assets/leftNav-3309d8a6.js","assets/leftNav-679b71ea.css","assets/rightNav-43a5a644.js","assets/rightNav-d5ba02ed.css","assets/projectNote-7cc24fd1.css"] : void 0)
+  component: () => __vitePreload(() => import("./projectNote-26d6de96.js"), true ? ["assets/projectNote-26d6de96.js","assets/leftNav-9c6a6af6.js","assets/leftNav-679b71ea.css","assets/rightNav-a45ab814.js","assets/rightNav-d5ba02ed.css","assets/projectNote-7cc24fd1.css"] : void 0)
 }, {
   path: "/knowledge",
-  component: () => __vitePreload(() => import("./knowledgeGraph-813ec0c0.js"), true ? ["assets/knowledgeGraph-813ec0c0.js","assets/leftNav-3309d8a6.js","assets/leftNav-679b71ea.css","assets/knowledgeGraph-89fc0845.css"] : void 0)
+  component: () => __vitePreload(() => import("./knowledgeGraph-f525c62d.js"), true ? ["assets/knowledgeGraph-f525c62d.js","assets/leftNav-9c6a6af6.js","assets/leftNav-679b71ea.css","assets/knowledgeGraph-53a17c08.css"] : void 0)
 }, {
   path: "/timeline",
-  component: () => __vitePreload(() => import("./timeLine-33a9a387.js"), true ? ["assets/timeLine-33a9a387.js","assets/rightSum-a81b82d0.js","assets/rightSum-efa9f3ea.css","assets/timeLine-ea8b839a.css"] : void 0)
+  component: () => __vitePreload(() => import("./timeLine-7b5d7b6f.js"), true ? ["assets/timeLine-7b5d7b6f.js","assets/rightSum-f10741a8.js","assets/rightSum-2fa03363.css","assets/timeLine-ea8b839a.css"] : void 0)
 }, {
   path: "/resource",
-  component: () => __vitePreload(() => import("./resourceCollect-f3bf2541.js"), true ? ["assets/resourceCollect-f3bf2541.js","assets/resourceCollect-172ffa79.css"] : void 0)
+  component: () => __vitePreload(() => import("./resourceCollect-12ed9880.js"), true ? ["assets/resourceCollect-12ed9880.js","assets/resourceCollect-172ffa79.css"] : void 0)
 }, {
   path: "/myCustom",
-  component: () => __vitePreload(() => import("./myCustom-28a1fd7e.js"), true ? [] : void 0)
+  component: () => __vitePreload(() => import("./myCustom-0fcd597a.js"), true ? [] : void 0)
 }, {
   path: "/detail",
-  component: () => __vitePreload(() => import("./blogDetail-91d53c6c.js"), true ? ["assets/blogDetail-91d53c6c.js","assets/blogDetail-9fab76d7.css"] : void 0)
+  component: () => __vitePreload(() => import("./blogDetail-d3f00a76.js"), true ? ["assets/blogDetail-d3f00a76.js","assets/blogDetail-307dcf40.css"] : void 0)
 }, {
   path: "/more",
-  component: () => __vitePreload(() => import("./moreList-605536d2.js"), true ? ["assets/moreList-605536d2.js","assets/noteCard-c44542a1.js","assets/noteCard-04bcbd4b.css","assets/moreList-59f72ae1.css"] : void 0)
+  component: () => __vitePreload(() => import("./moreList-2d7adf33.js"), true ? ["assets/moreList-2d7adf33.js","assets/noteCard-bdafac91.js","assets/noteCard-0ef1e969.css","assets/moreList-7e3829c9.css"] : void 0)
 }];
 const router = createRouter({
   history: createWebHashHistory(),
