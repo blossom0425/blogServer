@@ -1,0 +1,82 @@
+.rightSum[data-v-5113052b] {
+  margin-left: 30px;
+}
+.rightSum .selfInfo[data-v-5113052b] {
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.rightSum .selfInfo .self[data-v-5113052b] {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+}
+.rightSum .selfInfo h3[data-v-5113052b] {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 400;
+}
+.rightSum .selfInfo .content[data-v-5113052b] {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.rightSum .selfInfo .sumInfo[data-v-5113052b] {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.rightSum .selfInfo .sumInfo .sum[data-v-5113052b] {
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.rightSum .selfInfo .sumInfo .sum[data-v-5113052b]:hover, .rightSum .selfInfo .sumInfo .sum[data-v-5113052b]:active {
+  color: #bc6277;
+  transform: scale(1.05);
+}
+.rightSum .selfInfo .aboutMe[data-v-5113052b] {
+  margin-top: 10px;
+}
+.rightSum .selfInfo .aboutMe i[data-v-5113052b] {
+  cursor: pointer;
+  margin-left: 10px;
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  background-size: cover;
+  transition: all 0.3s;
+}
+.rightSum .selfInfo .aboutMe i[data-v-5113052b]:hover, .rightSum .selfInfo .aboutMe i[data-v-5113052b]:active {
+  transform: scale(1.05);
+}
+.rightSum .selfInfo .aboutMe .email[data-v-5113052b] {
+  background-image: url("/assets/email-25c9c179.svg");
+}
+.rightSum .selfInfo .aboutMe .github[data-v-5113052b] {
+  background-image: url("/assets/github-367bd16e.svg");
+}
+.modalclass .container[data-v-5113052b] {
+  display: flex;
+  flex-wrap: wrap;
+}
+.modalclass .container .tag[data-v-5113052b] {
+  cursor: pointer;
+  margin-bottom: 10px;
+  padding: 5px 15px;
+  color: #fff;
+  background-color: #bc6277;
+  margin-right: 10px;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+.modalclass .container .tag[data-v-5113052b]:hover, .modalclass .container .tag[data-v-5113052b]:active {
+  background-color: rgb(187, 125, 139);
+}
+.modalclass {
+    width: 40%;
+    min-width: 500px;
+    max-width: 900px;
+}
